@@ -16,6 +16,5 @@ employee_df <- data.frame(
 # View the actual data frame
 View(employee_df)
 
-
-# Output will display the records for E001 and E003
-employee_df[c(1,3), ]
+# a answer
+print(employee_df[c(1,3), ])
