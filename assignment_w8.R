@@ -18,3 +18,15 @@ View(employee_df)
 
 # a answer
 print(employee_df[c(1,3), ])
+
+
+# Part b
+new_employee <- data.frame(
+  Employee_ID = "E008", 
+  Name = "Ali", 
+  Department = "Finance", 
+  Monthly_Sales = 90, 
+  Projects_Completed = 11, 
+  Satisfaction_Score = 8.7
+)
+employee_df <- rbind(employee_df, new_employee)
