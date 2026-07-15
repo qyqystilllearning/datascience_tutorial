@@ -30,3 +30,10 @@ new_employee <- data.frame(
   Satisfaction_Score = 8.7
 )
 employee_df <- rbind(employee_df, new_employee)
+
+# part c
+employee_df$Performance_Index <- (employee_df$Monthly_Sales * 0.5) + 
+  (employee_df$Projects_Completed * 2) + 
+  (employee_df$Satisfaction_Score)
+
+View(employee_df)
