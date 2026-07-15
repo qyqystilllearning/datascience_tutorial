@@ -37,3 +37,24 @@ employee_df$Performance_Index <- (employee_df$Monthly_Sales * 0.5) +
   (employee_df$Satisfaction_Score)
 
 View(employee_df)
+
+# part d data cleaning
+
+# i.
+employee_df <- employee_df[!duplicated(employee_df$Employee_ID), ]
+
+# ii.
+median_sales <- median(employee_df$Monthly_Sales, na.rm = TRUE)
+employee_df$Monthly_Sales[employee_df$Monthly_Sales < 0 | employee_df$Monthly_Sales > 100] <- median_sales
+
+# Satisfaction_Score range [0, 10]. Outliers: Nisa (12.5)
+median_score <- median(employee_df$Satisfaction_Score, na.rm = TRUE)
+employee_df$Satisfaction_Score[employee_df$Satisfaction_Score < 0 | employee_df$Satisfaction_Score > 10] <- median_score
+
+# iii.
+mean_projects <- mean(employee_df$Projects_Completed, na.rm = TRUE)
+employee_df$Projects_Completed[is.na(employee_df$Projects_Completed)] <- mean_projects
+
+# View the final cleaned and updated dataset
+print("Final Cleaned Data Frame:")
+print(employee_df)
