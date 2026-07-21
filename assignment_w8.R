@@ -57,4 +57,4 @@ employee_df$Projects_Completed[is.na(employee_df$Projects_Completed)] <- mean_pr
 
 # View the final cleaned and updated dataset
 print("Final Cleaned Data Frame:")
-print(employee_df)
+View(employee_df)
