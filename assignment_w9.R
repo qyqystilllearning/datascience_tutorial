@@ -38,6 +38,11 @@ rmse_A
 plot(df_A$Weight_kg, df_A$Fee_RM, main = "Courier Fee vs. Weight",
      xlab = "Weight (kg)", ylab = "Fee (RM)", pch = 16, col = "darkblue")
 abline(model_A, col = "red", lwd = 2)
-points(test_A$Weight_kg, pred_A, pch = 4, col = "green", cex = 2, lwd = 2)
-legend("topleft", legend = c("Data Points", "Regression Line", "Test Predictions (X)"),
-       pch = c(16, NA, 4), lty = c(NA, 1, NA), col = c("darkblue", "red", "green"))
+points(test_A$Weight_kg, pred_A, pch = 4, col = "green", cex = 0.7, lwd = 2)
+# Updated legend code to make it smaller and remove the border box
+legend("topleft", 
+       legend = c("Data Points", "Regression Line", "Test Predictions (X)"),
+       pch = c(16, NA, 4), 
+       lty = c(NA, 1, NA), 
+       col = c("darkblue", "red", "green"),
+       cex = 0.7)
