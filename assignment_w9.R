@@ -59,3 +59,6 @@ df_B <- data.frame(
 )
 train_B <- df_B[1:10, ]
 test_B <- df_B[11:15, ]
+
+# 2. Fit MLR Model
+model_B <- lm(kWh ~ Temp_C + Occupants, data = train_B)
