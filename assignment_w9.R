@@ -46,3 +46,16 @@ legend("topleft",
        lty = c(NA, 1, NA), 
        col = c("darkblue", "red", "green"),
        cex = 0.7)
+
+# ---------- #
+#   PART B   #
+# ---------- #
+
+# 1. Dataset Preparation & Splitting
+df_B <- data.frame(
+  Temp_C = c(33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19),
+  Occupants = c(1, 2, 2, 3, 1, 4, 3, 2, 4, 1, 3, 2, 4, 3, 1),
+  kWh = c(249, 276, 285, 306, 232, 343, 307, 239, 337, 185, 285, 214, 314, 244, 164)
+)
+train_B <- df_B[1:10, ]
+test_B <- df_B[11:15, ]
