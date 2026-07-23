@@ -1,6 +1,8 @@
 # Week 10 Assignment
 # Muhammad Rizqy Hidayat - 26000108
 
+# بِسْمِ ٱللَّهِ ٱلرَّحْمَٰنِ ٱلرَّحِيمِ
+
 # 1. Write a R code to create a sequence of 20 numbers. The program will calculate and
 # display the square of the number sequence.
 
