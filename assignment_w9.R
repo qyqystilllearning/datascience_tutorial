@@ -70,3 +70,8 @@ summary(model_B)
 pred_B <- predict(model_B, newdata = test_B)
 results_B <- data.frame(Temp_C = test_B$Temp_C, Occupants = test_B$Occupants,
                         Actual = test_B$kWh, Predicted = round(pred_B, 2))
+
+# 5. Compute MAPE and RMSE
+error_B <- test_B$kWh - pred_B
+mape_B <- mean(abs(error_B / test_B$kWh)) * 100
+rmse_B <- sqrt(mean(error_B^2))
