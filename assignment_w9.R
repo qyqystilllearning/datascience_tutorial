@@ -62,3 +62,6 @@ test_B <- df_B[11:15, ]
 
 # 2. Fit MLR Model
 model_B <- lm(kWh ~ Temp_C + Occupants, data = train_B)
+
+# 3. Report Coefficients and R-squared
+summary(model_B)
