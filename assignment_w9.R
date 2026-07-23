@@ -65,3 +65,8 @@ model_B <- lm(kWh ~ Temp_C + Occupants, data = train_B)
 
 # 3. Report Coefficients and R-squared
 summary(model_B)
+
+# 4. Predictions & Results Table
+pred_B <- predict(model_B, newdata = test_B)
+results_B <- data.frame(Temp_C = test_B$Temp_C, Occupants = test_B$Occupants,
+                        Actual = test_B$kWh, Predicted = round(pred_B, 2))
